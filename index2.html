@@ -1,0 +1,1694 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-[#040d21] text-white antialiased">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Enterprise Clone</title>
+  <link href="src/output.css" rel="stylesheet">
+  <script src="script.js" defer></script>
+
+</head>
+
+<body class="bg-black text-white antialiased m-0 p-0">
+
+
+
+
+
+  <header class="w-full bg-black     relative">
+
+ 
+    <div class="md:hidden">
+
+      <nav class="h-16 flex items-center justify-between px-4">
+
+        <button id="openMenuBtn" class="text-white p-1 -ml-1" aria-label="Open menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+
+        <a href="#" class="hover:text-gray-400 transition-colors">
+          <svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" data-view-component="true"
+            class="fill-current text-white">
+            <path
+              d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.35 3.12.88.01.47.01.84.01.93 0 .22-.16.47-.55.38A8.013 8.013 0 0 1 0 8c0-4.42 3.58-8 8-8Z">
+            </path>
+          </svg>
+        </a>
+
+        <a href="#"
+          class="text-white border border-white px-3 py-2 rounded-lg hover:text-gray-300 font-semibold text-sm">Sign
+          in</a>
+
+      </nav>
+
+      <!-- Mobile full-screen menu -->
+      <div id="mobileMenu" class="hidden    fixed inset-0   z-50 flex flex-col">
+
+        <div class="h-16 flex items-center  bg-gray-900 justify-between px-4       ">
+          <button id="closeMenuBtn" class="p-1 -ml-1 text-gray-700" aria-label="Close menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" class="fill-current text-gray-400">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+
+          <svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" data-view-component="true"
+            class="fill-current text-white">
+            <path
+              d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.35 3.12.88.01.47.01.84.01.93 0 .22-.16.47-.55.38A8.013 8.013 0 0 1 0 8c0-4.42 3.58-8 8-8Z">
+            </path>
+          </svg>
+          <a href="#"
+            class="text-white border border-white px-3 py-2 rounded-lg hover:text-gray-300 font-semibold text-sm">Sign
+            in</a>
+
+        </div>
+
+        <div id="mainMenu"
+          class="flex-1 overflow-y-auto font-semibold   bg-white rounded-t-2xl -translate-x-full transition-transform duration-100 ease-out">
+          <ul class="divide-y text-xl  divide-gray-100 p-4">
+            <li>
+              <a href="#" class="flex items-center justify-between px-4 py-4   font-semibold text-gray-900">
+                Platform
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="text-gray-400">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="flex items-center justify-between px-4 py-4  font-semibold text-gray-900">
+                Solutions
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="text-gray-400">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="flex items-center justify-between px-4 py-4   font-semibold text-gray-900">
+                Resources
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="text-gray-400">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="flex items-center justify-between px-4 py-4   font-semibold text-gray-900">
+                Open Source
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="text-gray-400">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="flex items-center justify-between px-4 py-4 text-[15px] font-semibold text-gray-900">
+                Enterprise
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="text-gray-400">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="flex items-center px-4 py-4   font-semibold text-gray-900">
+                Pricing
+              </a>
+            </li>
+          </ul>
+
+          <div class="px-6 py-4 ">
+            <div class="relative">
+              <input type="text" placeholder="Search or jump to..."
+                class="w-full bg-gray-50 border border-gray-200 focus:border-blue-500 focus:outline-none rounded-md py-2 pl-8 pr-10 text-[14px] text-gray-700 placeholder:text-gray-400" />
+              <span class="absolute left-2.5 top-2.5 text-gray-400">
+                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 16 16">
+                  <path
+                    d="M10.68 11.74a6 6 0 1 1 1.06-1.06l3.24 3.24a.75.75 0 1 1-1.06 1.06l-3.24-3.24ZM11.5 7a4.5 4.5 0 1 0-9 0 4.5 4.5 0 0 0 9 0Z">
+                  </path>
+                </svg>
+              </span>
+              <span
+                class="absolute right-2.5 top-1.5 border border-gray-200 bg-white px-1.5 py-0.2 rounded text-[11px] text-gray-400">/</span>
+            </div>
+          </div>
+
+          <div class="px-6 pb-6">
+            <a href="#"
+              class="block w-full text-center bg-[#151b23] hover:bg-black text-white font-semibold text-sm py-2.5 rounded-md transition-colors">
+              Sign up
+            </a>
+          </div>
+        </div>
+
+      </div>
+    
+
+    </div>
+ 
+    <div class="hidden md:block">
+
+      <nav class="max-w-8xl mx-auto px-6 h-16 flex items-center justify-between text-[18px]">
+
+        <div class="flex items-center space-x-6">
+          <a href="#" class="hover:text-gray-400 transition-colors">
+            <svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" data-view-component="true"
+              class="fill-current text-white">
+              <path
+                d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.35 3.12.88.01.47.01.84.01.93 0 .22-.16.47-.55.38A8.013 8.013 0 0 1 0 8c0-4.42 3.58-8 8-8Z">
+              </path>
+            </svg>
+          </a>
+
+          <div class="flex items-center space-x-4 font-semibold text-gray-300">
+            <button class="flex items-center hover:text-white transition-colors">
+              Platform
+              <span class="ml-1 text-xs opacity-60">▼</span>
+            </button>
+            <button class="flex items-center hover:text-white transition-colors">
+              Solutions
+              <span class="ml-1 text-xs opacity-60">▼</span>
+            </button>
+            <button class="flex items-center hover:text-white transition-colors">
+              Resources
+              <span class="ml-1 text-xs opacity-60">▼</span>
+            </button>
+            <button class="flex items-center hover:text-white transition-colors">
+              Open Source
+              <span class="ml-1 text-xs opacity-60">▼</span>
+            </button>
+            <button class="flex items-center hover:text-white transition-colors">
+              Enterprise
+              <span class="ml-1 text-xs opacity-60">▼</span>
+            </button>
+            <a href="#" class="hover:text-white transition-colors">Pricing</a>
+          </div>
+        </div>
+
+        <div class="flex items-center space-x-4">
+          <div class="relative">
+            <input type="text" placeholder="Search or jump to..."
+              class="bg-transparent border border-gray-700 hover:border-gray-500 focus:border-blue-500 focus:outline-none rounded-md py-1.5 pl-8 pr-10 text-[13px] text-gray-300 w-60 transition-all placeholder:text-gray-400" />
+            <span class="absolute left-2.5 top-2.5 text-gray-400">
+              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 16 16">
+                <path
+                  d="M10.68 11.74a6 6 0 1 1 1.06-1.06l3.24 3.24a.75.75 0 1 1-1.06 1.06l-3.24-3.24ZM11.5 7a4.5 4.5 0 1 0-9 0 4.5 4.5 0 0 0 9 0Z">
+                </path>
+              </svg>
+            </span>
+            <span
+              class="absolute right-2.5 top-1.5 border border-gray-700 bg-gray-900 px-1.5 py-0.2 rounded text-[11px] text-gray-400">/</span>
+          </div>
+
+          <a href="#" class="text-white hover:text-gray-300 font-semibold text-sm">Sign in</a>
+
+          <a href="#"
+            class="border border-white hover:bg-white hover:text-black font-semibold text-sm py-1.5 px-3 rounded-md transition-colors duration-150">
+            Sign up
+          </a>
+        </div>
+      </nav>
+
+      <nav class="bg-[#010409]/60 backdrop-blur-md border-t border-gray-800">
+        <div class="max-w-8xl mx-auto px-6 h-12 flex items-center space-x-6 text-[16px]">
+          <a href="#" class="font-semibold text-white border-b-2 border-[#1f6feb] h-full flex items-center px-1">
+            Enterprise
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white transition-colors h-full flex items-center">
+            Advanced Security
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white transition-colors h-full flex items-center">
+            Premium Support
+          </a>
+        </div>
+      </nav>
+
+    </div>
+   
+
+  </header>
+
+
+
+
+
+
+  <main class="relative ">
+    <!-- main background section  -->
+    <section>
+      <div class="relative bg-linear-to-b from-[#040d21] to-[#0d1347] pt-24 pb-32 overflow-hidden">
+        <!-- main image bg -->
+        <div class="max-w-4xl mx-auto px-6 text-center flex flex-col items-center">
+
+          <h1 class="text-4xl md:text-6xl font-semibold tracking-tight text-white leading-[1.1] max-w-3xl">
+            The AI-powered developer platform for the agent-ready enterprise
+          </h1>
+
+          <p class="mt-6 text-base md:text-[19px] text-gray-400 leading-relaxed max-w-2xl font-light">
+            Bring your DevOps together on one secure platform built for speed, scale, and the agent-driven future of
+            software.
+          </p>
+
+          <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
+            <a href="#"
+              class="w-full sm:w-auto bg-[#1f883d] hover:bg-[#1a7334] text-white font-semibold px-6 py-3.5 rounded-lg text-base shadow-lg shadow-green-900/20 transition-all text-center">
+              Start a 30-day free trial
+            </a>
+            <a href="#"
+              class="w-full sm:w-auto bg-[#1c2135]/80 hover:bg-[#242b45] text-white font-semibold px-6 py-3.5 rounded-lg text-base border border-gray-800 transition-all text-center">
+              Contact sales
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- running line -->
+    <section>
+      <div class="w-full bg-black py-12">
+
+        <div class="relative max-w-7xl w-full mx-auto  overflow-hidden group [--marquee-speed:30s]">
+
+          <div
+            class="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-black via-black/80 to-transparent z-10 pointer-events-none">
+          </div>
+          <div
+            class="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-black via-black/80 to-transparent z-10 pointer-events-none">
+          </div>
+
+          <div class="flex w-max">
+
+            <div
+              class="flex items-center gap-24 px-12 shrink-0 animate-marquee group-hover:[animation-play-state:paused]">
+              <div class="shrink-0 opacity-40 hover:opacity-100 transition-opacity duration-200 cursor-pointer">
+                <svg class="h-8 fill-current text-white" viewBox="0 0 100 40" width="80">
+                  <ellipse cx="50" cy="20" rx="45" ry="18" fill="none" stroke="currentColor" stroke-width="2" />
+                  <text x="50" y="26" font-family="Georgia, serif" font-weight="bold" font-style="italic" font-size="18"
+                    text-anchor="middle" fill="currentColor">Ford</text>
+                </svg>
+              </div>
+
+              <div class="shrink-0 opacity-40 hover:opacity-100 transition-opacity duration-200 cursor-pointer">
+                <span class="text-white text-3xl font-black tracking-tighter">3M</span>
+              </div>
+
+              <div class="shrink-0 opacity-40 hover:opacity-100 transition-opacity duration-200 cursor-pointer">
+                <span class="text-white text-3xl font-extrabold italic tracking-tight">P&G</span>
+              </div>
+
+              <div
+                class="shrink-0 opacity-40 hover:opacity-100 transition-opacity duration-200 cursor-pointer flex items-center gap-2">
+                <span class="text-white text-lg font-bold tracking-wider">American Airlines</span>
+                <span class="text-xl text-blue-400">✈</span>
+              </div>
+
+              <div class="shrink-0 opacity-40 hover:opacity-100 transition-opacity duration-200 cursor-pointer">
+                <span
+                  class="text-white text-2xl font-black tracking-widest border-t-2 border-b-2 border-white/40 py-0.5">KPMG</span>
+              </div>
+
+              <div class="shrink-0 opacity-40 hover:opacity-100 transition-opacity duration-200 cursor-pointer">
+                <span class="text-white text-3xl font-bold tracking-tight lowercase">stripe</span>
+              </div>
+
+              <div
+                class="shrink-0 opacity-40 hover:opacity-100 transition-opacity duration-200 cursor-pointer flex items-center gap-2">
+                <svg class="h-7 w-7 fill-current text-white" viewBox="0 0 24 24">
+                  <path
+                    d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.49 17.3c-.22.36-.68.49-1.05.26-2.9-1.77-6.56-2.17-10.87-1.19-.41.1-.83-.16-.93-.57-.1-.41.16-.83.57-.93 4.72-1.08 8.76-.63 12.02 1.37.37.22.49.69.26 1.06zm1.47-3.26c-.28.45-.87.59-1.32.32-3.32-2.04-8.38-2.63-12.31-1.44-.51.15-1.04-.14-1.2-.66-.15-.51.14-1.04.66-1.2 4.49-1.36 10.07-.7 13.85 1.62.45.27.59.86.32 1.32zm.12-3.4c-3.98-2.36-10.55-2.58-14.36-1.42-.61.19-1.26-.15-1.45-.76-.19-.61.15-1.26.76-1.45 4.38-1.33 11.62-1.08 16.2 1.64.55.33.73 1.04.4 1.6-.33.55-1.04.73-1.6.4z" />
+                </svg>
+                <span class="text-white text-lg font-bold tracking-tight">Spotify</span>
+              </div>
+            </div>
+
+            <div
+              class="flex items-center gap-24 px-12 shrink-0 animate-marquee group-hover:[animation-play-state:paused]"
+              aria-hidden="true">
+              <div class="shrink-0 opacity-40 hover:opacity-100 transition-opacity duration-200 cursor-pointer">
+                <svg class="h-8 fill-current text-white" viewBox="0 0 100 40" width="80">
+                  <ellipse cx="50" cy="20" rx="45" ry="18" fill="none" stroke="currentColor" stroke-width="2" />
+                  <text x="50" y="26" font-family="Georgia, serif" font-weight="bold" font-style="italic" font-size="18"
+                    text-anchor="middle" fill="currentColor">Ford</text>
+                </svg>
+              </div>
+
+              <div class="shrink-0 opacity-40 hover:opacity-100 transition-opacity duration-200 cursor-pointer">
+                <span class="text-white text-3xl font-black tracking-tighter">3M</span>
+              </div>
+
+              <div class="shrink-0 opacity-40 hover:opacity-100 transition-opacity duration-200 cursor-pointer">
+                <span class="text-white text-3xl font-extrabold italic tracking-tight">P&G</span>
+              </div>
+
+              <div
+                class="shrink-0 opacity-40 hover:opacity-100 transition-opacity duration-200 cursor-pointer flex items-center gap-2">
+                <span class="text-white text-lg font-bold tracking-wider">American Airlines</span>
+                <span class="text-xl text-blue-400">✈</span>
+              </div>
+
+              <div class="shrink-0 opacity-40 hover:opacity-100 transition-opacity duration-200 cursor-pointer">
+                <span
+                  class="text-white text-2xl font-black tracking-widest border-t-2 border-b-2 border-white/40 py-0.5">KPMG</span>
+              </div>
+
+              <div class="shrink-0 opacity-40 hover:opacity-100 transition-opacity duration-200 cursor-pointer">
+                <span class="text-white text-3xl font-bold tracking-tight lowercase">stripe</span>
+              </div>
+
+              <div
+                class="shrink-0 opacity-40 hover:opacity-100 transition-opacity duration-200 cursor-pointer flex items-center gap-2">
+                <svg class="h-7 w-7 fill-current text-white" viewBox="0 0 24 24">
+                  <path
+                    d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.49 17.3c-.22.36-.68.49-1.05.26-2.9-1.77-6.56-2.17-10.87-1.19-.41.1-.83-.16-.93-.57-.1-.41.16-.83.57-.93 4.72-1.08 8.76-.63 12.02 1.37.37.22.49.69.26 1.06zm1.47-3.26c-.28.45-.87.59-1.32.32-3.32-2.04-8.38-2.63-12.31-1.44-.51.15-1.04-.14-1.2-.66-.15-.51.14-1.04.66-1.2 4.49-1.36 10.07-.7 13.85 1.62.45.27.59.86.32 1.32zm.12-3.4c-3.98-2.36-10.55-2.58-14.36-1.42-.61.19-1.26-.15-1.45-.76-.19-.61.15-1.26.76-1.45 4.38-1.33 11.62-1.08 16.2 1.64.55.33.73 1.04.4 1.6-.33.55-1.04.73-1.6.4z" />
+                </svg>
+                <span class="text-white text-lg font-bold tracking-tight">Spotify</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- descption after running line -->
+    <section class=" pt-24 pb-12 text-center px-6">
+      <h2 class="text-3xl md:text-5xl font-semibold text-white tracking-tight leading-tight">
+        Enterprise-grade by design
+      </h2>
+      <p class="mt-4 text-base md:text-lg text-gray-400 max-w-2xl mx-auto font-light leading-relaxed">
+        A centrally governed foundation that provides the control and visibility you need to innovate securely at scale.
+      </p>
+    </section>
+
+    <!-- github error image -->
+    <section>
+      <div
+        class="max-w-7xl  mx-auto bg-gradient-to-br from-black via-[#0d1347] to-[#040d21] py-20 px-6 flex items-center justify-center font-sans antialiased">
+
+        <div
+          class="relative w-full max-w-5xl rounded-2xl border border-white/10 bg-[#0d1117]/60 backdrop-blur-md p-6 shadow-2xl shadow-indigo-500/10">
+          <div
+            class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-purple-600/20 to-blue-600/20 opacity-30 blur-xl pointer-events-none">
+          </div>
+
+          <div class="relative z-10 flex flex-col gap-4">
+
+            <div class="flex items-center gap-2 text-sm text-[#8b949e]">
+              <span class="font-semibold text-white tracking-tight">github-advanced-security</span>
+              <span
+                class="px-2 py-0.5 text-[11px] font-medium border border-[#30363d] rounded-full bg-[#161b22]">bot</span>
+              <span>found potential issues</span>
+            </div>
+
+            <div class="overflow-hidden  rounded-lg border border-[#30363d] bg-[#010409]">
+
+              <div class="py-4 font-mono text-xs md:text-sm leading-relaxed overflow-x-auto">
+                <div class="flex items-start px-4 bg-[#1f2937]/10 hover:bg-[#1f2937]/20">
+                  <span class="w-8 select-none text-[#484f58] text-right pr-4">1</span>
+                  <span class="text-[#3fb950] font-bold mr-2 select-none">+</span>
+                  <span class="text-white">
+                    <span class="text-[#ff7b72]">const</span> <span class="text-[#79c0ff]">express</span> = <span
+                      class="text-[#58a6ff]">require</span>(<span class="text-[#a5d6ff]">'express'</span>);
+                  </span>
+                </div>
+
+                <div class="flex items-start px-4 bg-[#1f2937]/10 hover:bg-[#1f2937]/20">
+                  <span class="w-8 select-none text-[#484f58] text-right pr-4">2</span>
+                  <span class="text-[#3fb950] font-bold mr-2 select-none">+</span>
+                  <span></span>
+                </div>
+
+                <div class="flex items-start px-4 bg-[#1f2937]/10 hover:bg-[#1f2937]/20">
+                  <span class="w-8 select-none text-[#484f58] text-right pr-4">3</span>
+                  <span class="text-[#3fb950] font-bold mr-2 select-none">+</span>
+                  <span class="text-white">
+                    <span class="text-[#ff7b72]">const</span> <span class="text-[#79c0ff]">app</span> = <span
+                      class="text-[#58a6ff]">express</span> ();
+                  </span>
+                </div>
+
+                <div class="flex items-start px-4 bg-[#1f2937]/10 hover:bg-[#1f2937]/20">
+                  <span class="w-8 select-none text-[#484f58] text-right pr-4">4</span>
+                  <span class="text-[#3fb950] font-bold mr-2 select-none">+</span>
+                  <span class="text-white">
+                    <span class="text-[#79c0ff]">app</span>.<span class="text-[#d2a8ff]">get</span>(<span
+                      class="text-[#a5d6ff]'/'</span>, (<span class=" text-[#ff7b72]">req</span>, <span
+                      class="text-[#ff7b72]">res</span>) <span class="text-[#ff7b72]">=&gt;</span> <span
+                      class="text-[#79c0ff]">res</span>.<span class="text-[#d2a8ff]">send</span>(<span
+                      class="text-[#a5d6ff]">`Hello, ${<span class="text-[#79c0ff]">req</span>.<span
+                        class="text-[#79c0ff]">query</span>.<span class="text-[#ff7b72]">name</span>}!`</span>));
+                  </span>
+                </div>
+              </div>
+
+              <div
+                class="border-t border-[#30363d] bg-[#161b22] p-5 flex gap-4 items-start border-l-[4px] border-l-[#f85149]">
+
+                <div
+                  class="shrink-0 flex items-center justify-center w-5 h-5 rounded-full bg-[#f85149]/10 text-[#f85149] mt-0.5">
+                  <svg class="w-3 h-3 fill-current" viewBox="0 0 16 16">
+                    <path
+                      d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.75.75 0 1 1 1.06 1.06L9.06 8l3.22 3.22a.75.75 0 1 1-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 0 1-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06z" />
+                  </svg>
+                </div>
+
+                <div class="flex flex-col gap-1.5 text-sm">
+                  <div class="text-[#8b949e]">Check failure</div>
+
+                  <div class="flex items-center gap-1.5 text-white font-medium">
+                    <svg class="w-4 h-4 fill-current text-[#8b949e]" viewBox="0 0 16 16">
+                      <path
+                        d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.35 3.12.88.01.64.01 1.11.01 1.26 0 .21-.15.47-.55.38A8.006 8.006 0 0 1 0 8c0-4.42 3.58-8 8-8z" />
+                    </svg>
+                    <span>Code scanning / CodeQL</span>
+                  </div>
+
+                  <div class="flex items-center gap-2 mt-1">
+                    <span class="text-white text-base font-bold text-[#f85149]">Reflected cross-site scripting</span>
+                    <span
+                      class="px-2 py-0.5 text-xs text-[#f85149] border border-[#f85149]/30 rounded-full bg-[#f85149]/10">High</span>
+                  </div>
+
+                  <p class="text-[#8b949e] text-xs md:text-sm mt-0.5">
+                    Cross-site scripting vulnerability due to <span class="text-[#58a6ff]">user-provided value</span>.
+                  </p>
+
+                  <a href="#" class="text-[#58a6ff] text-xs hover:underline mt-1 font-medium flex items-center gap-1">
+                    Show more details
+                  </a>
+                </div>
+              </div>
+
+              <div class="border-t border-[#30363d] bg-[#0d1117] p-5 flex gap-4 items-start">
+
+                <div
+                  class="shrink-0 flex items-center justify-center w-8 h-8 rounded-full border border-[#30363d] bg-[#161b22] text-white">
+                  <svg class="w-4 h-4 fill-current text-white/90" viewBox="0 0 16 16">
+                    <path
+                      d="M8 1.25a.75.75 0 0 1 .64.354l1.246 1.958 2.193.266a.75.75 0 0 1 .432 1.304l-1.646 1.493.468 2.158a.75.75 0 0 1-1.11.802L8.5 8.441l-1.723.996a.75.75 0 0 1-1.11-.802l.468-2.158-1.646-1.493a.75.75 0 0 1 .432-1.304l2.193-.266L7.36 1.604A.75.75 0 0 1 8 1.25z" />
+                  </svg>
+                </div>
+
+                <div class="flex-1 flex flex-col gap-2">
+                  <div class="flex items-center gap-2">
+                    <span class="text-sm font-semibold text-white">Copilot Autofix</span>
+                    <span
+                      class="px-1.5 py-0.5 text-[10px] font-bold border border-white/20 rounded-md bg-white/10 text-white">AI</span>
+                  </div>
+
+                  <span class="text-xs text-[#8b949e]">Generating a fix suggestion...</span>
+
+                  <div class="w-full h-2 bg-[#21262d] rounded-full overflow-hidden mt-1 relative">
+                    <div
+                      class="absolute inset-y-0 left-0 bg-gradient-to-r from-purple-500 via-indigo-500 to-blue-500 rounded-full animate-[shimmer_1.5s_infinite]"
+                      style="width: 70%;"></div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- after github image descption -->
+    <section class="  md:py-6 px-4">
+      <div class="bg-black text-white  flex items-center justify-center  ">
+        <div
+          class="max-w-7xl w-full flex flex-col md:justify-between md:flex-row md:border-b border-zinc-700  gap-12 lg:gap-32  py-16 items-start">
+
+          <!-- Left Column: Main Headline (Single Paragraph style) -->
+          <div class="max-w-2xl">
+            <h2 class="text-2xl   md:text-[32px] font-semi tracking-tight text-white leading-[1.3] font-sans">
+              Security built into every stage of the software lifecycle.
+              <span class="text-[#8b949e] font-normal inline ml-1">
+                GitHub integrates automated, developer-first security that keeps teams moving fast.
+              </span>
+            </h2>
+          </div>
+
+          <!-- Right Column: Vertical Timeline / Feature List -->
+          <div class="max-w-2xl">
+
+            <!-- Feature Item 1 -->
+            <div class="grid grid-cols-[20px_1fr] gap-x-4">
+              <div class="flex flex-col items-center">
+                <div class="w-2 h-2 rounded-full border-2 border-[#6b80849d] bg-black "></div>
+                <div class="w-0.5 flex-1 bg-[#6b80849d] mt-0.5"></div>
+              </div>
+              <p class="pb-8 text-[14px] sm:text-[16px] text-[#8b949e] leading-relaxed font-sans">
+                <strong class="text-white font-semibold">Find and fix vulnerabilities natively.</strong>
+                Automate code, secret, and dependency scanning with
+                <a href="#" class="text-[#7DD3FC] border-b hover:border-b-2">GitHub Advanced Security</a>,
+                built directly into the workflow.
+              </p>
+            </div>
+
+            <!-- Feature Item 2 -->
+            <div class="grid grid-cols-[20px_1fr] gap-x-4">
+              <div class="flex flex-col items-center">
+                <div class="w-2 h-2 rounded-full border-2 border-[#6b80849d] bg-black mt-0.5"></div>
+                <div class="w-0.5 flex-1 bg-[#6b80849d] mt-0.5 "></div>
+              </div>
+              <p class="pb-8 text-[14px] sm:text-[16px] text-[#8b949e] leading-relaxed font-sans">
+                <strong class="text-white font-semibold">Secure your software supply chain.</strong>
+                Visualize and maintain the dependencies in your
+                <a href="#" class="text-[#7DD3FC] border-b hover:border-b-2">software supply chain</a>.
+              </p>
+            </div>
+
+            <!-- Feature Item 3 (last item — no connecting line) -->
+            <div class="grid grid-cols-[20px_1fr] gap-x-4">
+              <div class="flex flex-col items-center">
+                <div class="w-2 h-2 rounded-full border-2 border-[#6b80849d] bg-black mt-0.5"></div>
+              </div>
+              <p class="text-[14px] sm:text-[16px] text-[#8b949e] leading-relaxed font-sans">
+                <strong class="text-white font-semibold">Control the location of your code.</strong>
+                Enjoy SaaS agility with enhanced governance, security, and
+                <a href="#" class="text-[#7DD3FC] border-b hover:border-b-2">flexible data residency</a>.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <section class="bg-black text-white  py-8 md:py-16   px-6 flex flex-col items-center">
+      <div class="md:max-w-3xl  w-full text-center flex flex-col items-center gap-6">
+        <h2 class="px-16   text-3xl   md:text-4xl font-semibold tracking-tight text-white leading-tight    ">
+          Built for your most valuable asset: your developers
+        </h2>
+        <p class="px-4 leading-relaxed text-lg max-w-xl   text-zinc-400">
+          GitHub transforms your engineering team into a high-performing, AI-powered force for innovation and growth.
+        </p>
+
+      </div>
+    </section>
+
+    <!--  youtube vedio wala -->
+    <section class="py-8 md:py-16 bg-black text-white">
+
+      <div class="max-w-7xl mx-auto px-4">
+
+        <div class="flex flex-col-reverse md:flex-row items-center gap-12">
+
+          <div class="w-full  md:w-1/2 flex flex-col items-start text-left">
+            <div class="w-full md:w-5/8">
+              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight text-white mb-4">
+                Scale your talent with GitHub Copilot
+              </h2>
+              <p class="leading-relaxed text-md mb-6 text-zinc-400">
+                Go beyond code completion with AI that improves quality and problem-solving and fuels innovation.
+              </p>
+
+              <div class="inline-block self-start">
+                <a href="#"
+                  class="relative inline-flex items-center gap-1.5 pb-1 text-sm md:text-base font-semibold text-[#7DD3FC] hover:transition-colors duration-400 group">
+                  <span>Explore Copilot for Business</span>
+
+                  <span class="inline-flex items-center translate-x-0   transition-transform duration-300 ease-out">
+                    <svg
+                      class="w-3.5 h-3.5 opacity-100 group-hover:opacity-0 group-hover:scale-50 transition-all duration-400 absolute"
+                      fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                    <svg
+                      class="w-4.5 h-4.5 opacity-0 scale-50 group-hover:opacity-100 group-hover:scale-100 transition-all duration-400"
+                      fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                  </span>
+
+                  <span
+                    class="absolute bottom-0 left-0 w-full h-[2px] bg-[#58a6ff] origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:w-1/2 flex justify-center  ">
+            <div class="p-[1px] bg-white w-full max-w-xl rounded-2xl border-4 md:border-8">
+              <div class="aspect-video relative overflow-hidden ">
+                <img src="/assests/image_b4e22c34.png" class="absolute  inset-0 w-full rounded-3xl h-full object-cover "
+                  alt="Thumbnail" />
+
+                <div class="absolute inset-0 z-10 flex flex-col justify-between p-4">
+
+                  <div class="relative flex items-center gap-2.5 z-10">
+
+                    <div
+                      class="w-10 h-10 rounded-full border border-white/10 bg-black/50   flex items-center justify-center">
+                      <svg height="32" width="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1"
+                        data-view-component="true"
+                        class="w-10 h-10   invert text-white fill-current bg-black rounded-full p-0.5">
+                        <path
+                          d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.35 3.12.88.01.47.01.84.01.93 0 .22-.16.47-.55.38A8.013 8.013 0 0 1 0 8c0-4.42 3.58-8 8-8Z">
+                        </path>
+                      </svg>
+
+                    </div>
+
+                    <div class="flex flex-col">
+                      <span class="text-white text-xl font-extrabold leading-tight">How to use GitHub for end-to-end
+                        development</span>
+                      <span class="text-[12px]">GitHub</span>
+                    </div>
+                  </div>
+
+                  <div id="play-button" class="absolute inset-0 flex items-center justify-center">
+                    <div
+                      class="bg-[#ff0000] rounded-xl shadow-lg transform transition-all duration-300 hover:scale-110 hover:bg-[#cc0000]">
+                      <svg
+                        class="w-16 h-11 transition-transform duration-200 ease-in-out hover:scale-105 cursor-pointer"
+                        viewBox="0 0 68 48" version="1.1" xmlns="http://w3.org">
+                        <!-- Outer Red Rounded Shape -->
+                        <path fill="#FF0000"
+                          d="M66.52,7.74c-0.78-2.93-3.09-5.24-6.02-6.02C55.21,1.01,34,1.01,34,1.01s-21.21,0-26.5,0.71 C4.57,2.5,2.26,4.81,1.48,7.74C0.77,13.03,0.77,24,0.77,24s0,10.97,0.71,16.26c0.78,2.93,3.09,5.24,6.02,6.02 C12.79,46.99,34,46.99,34,46.99s21.21,0,26.5-0.71c2.93-0.78,5.24-3.09,6.02-6.02C67.23,34.97,67.23,24,67.23,24 S67.23,13.03,66.52,7.74z">
+                        </path>
+
+                        <!-- Inner White Triangle (Play Arrow) -->
+                        <polygon fill="#FFFFFF" points="27.42,34.13 45.1,24 27.42,13.87"></polygon>
+                      </svg>
+
+                    </div>
+                  </div>
+
+                  <div id="video-footer" class="flex justify-between items-center w-full    ">
+                    <div
+                      class="w-18 h-4 p-6 rounded-full bg-black/40  backdrop-blur-md flex items-center justify-center">
+
+                      <svg xmlns="http://www.w3.org/2000/svg" class="invert"
+                        viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                        <path
+                          d="M288 64C252.7 64 224 92.7 224 128L224 384C224 419.3 252.7 448 288 448L480 448C515.3 448 544 419.3 544 384L544 183.4C544 166 536.9 149.3 524.3 137.2L466.6 81.8C454.7 70.4 438.8 64 422.3 64L288 64zM160 192C124.7 192 96 220.7 96 256L96 512C96 547.3 124.7 576 160 576L352 576C387.3 576 416 547.3 416 512L416 496L352 496L352 512L160 512L160 256L176 256L176 192L160 192z" />
+                      </svg>
+
+                    </div>
+                    <div
+                      class="flex items-center gap-1 px-5 py-2 rounded-2xl bg-black/60 backdrop-blur-md text-[16px] text-white">
+                      <span>Watch on</span>
+                      <span class="  font-extrabold tracking-tighter flex items-center gap-0.5">
+
+                        YouTube
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+
+            </div>
+          </div>
+
+
+
+
+
+
+        </div>
+      </div>
+
+    </section>
+
+    <!--  github photo wala -->
+    <section class="py-8 md:py-16 bg-black text-white">
+
+      <div class="max-w-7xl mx-auto px-4">
+
+        <div class="flex flex-col-reverse md:flex-row items-center gap-12">
+
+          <div class="w-full  md:w-1/2 flex flex-col items-start text-left">
+            <div class="w-full md:w-5/8">
+              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight text-white mb-4">
+                Scale your talent with GitHub Copilot
+              </h2>
+              <p class="leading-relaxed text-md mb-6 text-zinc-400">
+                Go beyond code completion with AI that improves quality and problem-solving and fuels innovation.
+              </p>
+
+              <div class="inline-block self-start">
+                <a href="#"
+                  class="relative inline-flex items-center gap-1.5 pb-1 text-sm md:text-base font-semibold text-[#7DD3FC] hover:transition-colors duration-400 group">
+                  <span>Explore Copilot for Business</span>
+
+                  <span class="inline-flex items-center translate-x-0   transition-transform duration-300 ease-out">
+                    <svg
+                      class="w-3.5 h-3.5 opacity-100 group-hover:opacity-0 group-hover:scale-50 transition-all duration-400 absolute"
+                      fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                    <svg
+                      class="w-4.5 h-4.5 opacity-0 scale-50 group-hover:opacity-100 group-hover:scale-100 transition-all duration-400"
+                      fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                  </span>
+
+                  <span
+                    class="absolute bottom-0 left-0 w-full h-[2px] bg-[#58a6ff] origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:w-1/2 flex justify-center  ">
+            <div class="w-full aspect-video    rounded-lg flex items-center justify-center">
+              <div class="relative max-w-xl font-sans">
+
+                <!-- glow behind github logo -->
+                <div
+                  class="absolute -top-6 -left-6 w-40 h-40 bg-indigo-600 opacity-30 blur-3xl rounded-full pointer-events-none">
+                </div>
+
+                <!-- fade to black on the right edge -->
+                <div class="absolute inset-y-0 right-0 w-1/3 pointer-events-none z-20"
+                  style="background: linear-gradient(to right, transparent, black);"></div>
+
+                <div class="relative flex gap-3">
+                  <div
+                    class="flex-shrink-0 w-8 h-8 rounded-full bg-black border border-neutral-700 flex items-center justify-center z-10">
+                    <svg viewBox="0 0 16 16" width="18" height="18" fill="#fff">
+                      <path
+                        d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z">
+                      </path>
+                    </svg>
+                  </div>
+
+                  <div class="flex-1 border border-neutral-700 rounded-lg bg-[#161b22] z-10">
+                    <div class="border-b border-neutral-700 px-4 py-2">
+                      <span class="text-neutral-100 font-semibold text-sm">Copilot</span>
+                      <span
+                        class="border border-neutral-700 text-white text-[11px] font-semibold px-2 py-0.5 rounded-full ml-1.5">AI</span>
+                      <span class="text-neutral-400 text-sm ml-1">commented</span>
+                    </div>
+                    <div class="p-4">
+                      <div class="flex items-start gap-2 mb-2.5">
+                        <span
+                          class="w-4 h-4 border border-neutral-500 rounded-sm inline-block mt-0.5 flex-shrink-0"></span>
+                        <span class="text-neutral-100 text-sm">User can pin only one PR Files Changed side panel</span>
+                      </div>
+                      <div class="flex items-start gap-2 mb-2.5">
+                        <span
+                          class="w-4 h-4 border border-neutral-500 rounded-sm inline-block mt-0.5 flex-shrink-0"></span>
+                        <span class="text-neutral-100 text-sm">The pinned panel is remembered for the user so it's
+                          applied across sessions</span>
+                      </div>
+                      <div class="flex items-start gap-2 mb-4">
+                        <span
+                          class="w-4 h-4 border border-neutral-500 rounded-sm inline-block mt-0.5 flex-shrink-0"></span>
+                        <span class="text-neutral-100 text-sm">The pinned panel can be resized</span>
+                      </div>
+                      <div class="text-sm text-neutral-400 mb-3.5 flex items-center gap-1 flex-wrap">
+                        <span>Closes</span>
+                        <svg viewBox="0 0 16 16" width="14" height="14" fill="#3fb950">
+                          <path
+                            d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16Zm3.78-9.72a.75.75 0 0 0-1.06-1.06L6.75 9.19 5.28 7.72a.75.75 0 0 0-1.06 1.06l2 2a.75.75 0 0 0 1.06 0l4.5-4.5Z">
+                          </path>
+                        </svg>
+                        <a href="#" class="text-blue-400 hover:underline">Allow users to pin side panels</a>
+                        <span>#1524</span>
+                      </div>
+                      <div class="text-xs text-neutral-500">Copilot is powered by AI, so mistakes are possible. Review
+                        carefully.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="relative flex items-center gap-2.5 mt-3 ml-11 z-10">
+                  <div
+                    class="w-7 h-7 rounded-full bg-neutral-800 border border-neutral-700 flex items-center justify-center">
+                    <svg viewBox="0 0 16 16" width="14" height="14" fill="#8b949e">
+                      <path
+                        d="M9.5 3.25a2.25 2.25 0 1 1 3 2.122V6A2.5 2.5 0 0 1 10 8.5H6a1 1 0 0 0-1 1v1.128a2.251 2.251 0 1 1-1.5 0V5.372a2.25 2.25 0 1 1 1.5 0v1.836A2.492 2.492 0 0 1 6 7h4a1 1 0 0 0 1-1v-.628A2.25 2.25 0 0 1 9.5 3.25Zm-6 0a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Zm8.25-.75a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5ZM4.25 12a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Z">
+                      </path>
+                    </svg>
+                  </div>
+                  <span class="text-sm text-neutral-100"><strong>Copilot</strong> <span class="text-neutral-400">started
+                      work on behalf of</span> <strong>monatheoctocat</strong></span>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+        </div>
+      </div>
+
+    </section>
+    <!--  ovoverse photo wala -->
+    <section class="py-8 md:py-16 bg-black text-white">
+
+      <div class="max-w-7xl mx-auto px-4">
+
+        <div class="flex flex-col-reverse md:flex-row items-center gap-12">
+
+          <div class="w-full  md:w-1/2 flex flex-col items-start text-left">
+            <div class="w-full md:w-5/8">
+              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight text-white mb-4">
+                Hit the ground coding
+              </h2>
+              <p class="leading-relaxed text-md mb-6 text-zinc-400">
+                Skip the ramp-up and accelerate impact with the platform trusted by over 180 million developers.
+              </p>
+              <div class="inline-block self-start">
+                <a href="#"
+                  class="relative inline-flex items-center gap-1.5 pb-1 text-sm md:text-base font-semibold text-[#7DD3FC] hover:transition-colors duration-400 group">
+                  <span>Explore the GitHub Marketplace</span>
+
+                  <span class="inline-flex items-center translate-x-0   transition-transform duration-300 ease-out">
+                    <svg
+                      class="w-3.5 h-3.5 opacity-100 group-hover:opacity-0 group-hover:scale-50 transition-all duration-400 absolute"
+                      fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                    <svg
+                      class="w-4.5 h-4.5 opacity-0 scale-50 group-hover:opacity-100 group-hover:scale-100 transition-all duration-400"
+                      fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                  </span>
+
+                  <span
+                    class="absolute bottom-0 left-0 w-full h-[2px] bg-[#58a6ff] origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="w-full md:w-1/2 flex justify-center relative">
+
+            <div
+              class="absolute -bottom-0 left-1/2 -translate-x-1/2 w-1/2 h-6 bg-indigo-600 blur-2xl rounded-full pointer-events-none">
+            </div>
+
+            <div
+              class="w-full bg-zinc-900 border border-zinc-800 border-b-transparent rounded-lg flex items-center justify-center relative z-10">
+              <div class="bg-[#0d1117] rounded-[10px] overflow-hidden p-2 flex flex-col items-center">
+                <img src="/assests/octoverse.png" alt="Octoverse 2025 Graphic" class="w-full h-auto block" />
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+    <!--  brandimage wala -->
+    <section class="py-8 md:py-16 bg-black text-white">
+
+      <div class="max-w-7xl mx-auto px-4">
+
+        <div class="flex flex-col-reverse md:flex-row items-center gap-12">
+
+          <div class="w-full  md:w-1/2 flex flex-col items-start text-left">
+            <div class="w-full md:w-5/8">
+              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight text-white mb-4">
+                Flexibility to build your way
+              </h2>
+              <p class="leading-relaxed text-md mb-6 text-zinc-400">
+                Tap into our ecosystem of apps, actions, and models to accelerate innovation.
+              </p>
+
+              <div class="inline-block self-start">
+                <a href="#"
+                  class="relative inline-flex items-center gap-1.5 pb-1 text-sm md:text-base font-semibold text-[#7DD3FC] hover:transition-colors duration-400 group">
+                  <span>Explore the GitHub Marketplace</span>
+
+                  <span class="inline-flex items-center translate-x-0   transition-transform duration-300 ease-out">
+                    <svg
+                      class="w-3.5 h-3.5 opacity-100 group-hover:opacity-0 group-hover:scale-50 transition-all duration-400 absolute"
+                      fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                    <svg
+                      class="w-4.5 h-4.5 opacity-0 scale-50 group-hover:opacity-100 group-hover:scale-100 transition-all duration-400"
+                      fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                  </span>
+
+                  <span
+                    class="absolute bottom-0 left-0 w-full h-[2px] bg-[#58a6ff] origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:w-1/2 flex justify-center">
+
+            <div class="w-full aspect-video   rounded-lg flex items-center justify-center relative overflow-hidden">
+              <img src="/assests/brandImage2.png" alt="" class="w-full h-full object-cover"
+                style="mask-image: linear-gradient(to right, transparent, black 75%, black 75%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 25%, black 75%, transparent);" />
+            </div>
+
+          </div>
+
+
+
+
+
+
+        </div>
+      </div>
+
+    </section>
+
+    <section class="py-8 md:py-16 px-4 ">
+      <div class="max-w-7xl mx-auto  border border-zinc-500  rounded-2xl md:rounded-4xl  ">
+
+        <div
+          class="w-full aspect-video rounded-2xl md:rounded-4xl flex justify-center border-4 md:border-8  border-zinc-700 overflow-hidden">
+          <img src="/assests/githubDashboardImage.png" alt="" class="">
+        </div>
+      </div>
+    </section>
+
+    <section class="  md:py-6 px-4">
+      <div class="bg-black text-white  flex items-center justify-center  ">
+        <div
+          class="max-w-7xl w-full flex flex-col md:justify-between md:flex-row md:border-b border-zinc-700  gap-12 lg:gap-32  py-16 items-start">
+
+          <!-- Left Column: Main Headline (Single Paragraph style) -->
+          <div class="max-w-2xl">
+            <h2 class="text-2xl   md:text-[32px] font-semi tracking-tight text-white leading-[1.3] font-sans">
+              From reactive administration to strategic platform leadership.
+              <span class="text-[#8b949e] font-normal inline ml-1">
+                Take control with centralized governance and automation that scales with your enterprise. </span>
+            </h2>
+          </div>
+
+          <!-- Right Column: Vertical Timeline / Feature List -->
+          <div class="w-full flex-1 md:max-w-xl">
+
+            <!-- Feature Item 1 -->
+            <div class="grid grid-cols-[20px_1fr] gap-x-4">
+              <div class="flex flex-col items-center">
+                <div class="w-2 h-2 rounded-full border-2 border-[#6b80849d] bg-black "></div>
+                <div class="w-0.5 flex-1 bg-[#6b80849d] mt-0.5"></div>
+              </div>
+              <p class="pb-8 text-[14px] sm:text-[16px] text-[#8b949e] leading-relaxed font-sans">
+                <strong class="text-white font-semibold">Manage multiple orgs from one place. Create and assign
+                  <a href="#" class="text-[#7DD3FC] border-b hover:border-b-2"> custom roles </a> and
+                  <a href="#" class="text-[#7DD3FC] border-b hover:border-b-2"> teams </a>
+                  to streamline management across your
+              </p>
+            </div>
+
+            <!-- Feature Item 2 -->
+            <div class="grid grid-cols-[20px_1fr] gap-x-4">
+              <div class="flex flex-col items-center">
+                <div class="w-2 h-2 rounded-full border-2 border-[#6b80849d] bg-black mt-0.5"></div>
+                <div class="w-0.5 flex-1 bg-[#6b80849d] mt-0.5 "></div>
+              </div>
+              <p class="pb-8 text-[14px] sm:text-[16px] text-[#8b949e] leading-relaxed font-sans">
+                <strong class="text-white font-semibold">Define and enforce policies.
+                  <a href="#" class="text-[#7DD3FC] border-b hover:border-b-2">Apply consistent, non-overridable
+                    rulesets </a>across every repository in your enterprise.
+              </p>
+            </div>
+
+            <!-- Feature Item 3 (last item — no connecting line) -->
+            <div class="grid grid-cols-[20px_1fr] gap-x-4">
+              <div class="flex flex-col items-center">
+                <div class="w-2 h-2 rounded-full border-2 border-[#6b80849d] bg-black mt-0.5"></div>
+              </div>
+              <p class="text-[14px] sm:text-[16px] text-[#8b949e] leading-relaxed font-sans">
+                <strong class="text-white font-semibold">Take command of your AI agents.
+                  <a href="#" class="text-[#7DD3FC] border-b hover:border-b-2">See and control every agent and
+                    action</a> from a single dashboard.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <section class="p-4 md:py-16 px-4">
+      <div class="md:max-w-7xl m-auto  ">
+        <div class=" text-3xl   md:text-4xl font-semibold tracking-tight text-white leading-tight">Adopted by the
+          world's leading organizations</div>
+        <div class=" py-16 grid grid-cols-1 gap-4 md:gap-12 md:grid-cols-3">
+          <div class="bg-[#111615] p-8 rounded-xl">
+            <div class="">
+              <img
+                src="https://images.ctfassets.net/8aevphvgewt8/4dWiHx0Si2XimIs2JZEU7t/d09af460045e73147819b8d7d3644287/ml.webp?fm=webp&q=90"
+                alt="">
+
+
+              <h2 class="text-xl pt-6 md:text-2xl font-semibold tracking-tight text-white mb-4">
+                Mercado Libre developers code 50% faster with GitHub Copilot</h2>
+
+              <div class="inline-block self-start">
+                <a href="#"
+                  class="relative inline-flex items-center gap-1.5 pb-1 text-lg md:text-lg font-semibold text-[#7DD3FC] hover:transition-colors duration-400 group">
+                  <span> Read customer story</span>
+
+                  <span class="inline-flex items-center translate-x-0   transition-transform duration-300 ease-out">
+                    <svg
+                      class="w-3.5 h-3.5 opacity-100 group-hover:opacity-0 group-hover:scale-50 transition-all duration-400 absolute"
+                      fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                    <svg
+                      class="w-4.5 h-4.5 opacity-0 scale-50 group-hover:opacity-100 group-hover:scale-100 transition-all duration-400"
+                      fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                  </span>
+
+                  <span
+                    class="absolute bottom-0 left-0 w-full h-[2px] bg-[#58a6ff] origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out"></span>
+                </a>
+              </div>
+
+
+            </div>
+          </div>
+          <div class="bg-[#111615] p-8 rounded-xl">
+            <div class="">
+              <img
+                src="https://images.ctfassets.net/8aevphvgewt8/1v3MnXmDnTr9bO4XDfqlDF/504798816cc3d15faaaf71c400a09545/wayfair.webp?w=960&fm=webp&q=90"
+                alt="">
+
+
+              <h2 class="text-xl pt-6 md:text-2xl font-semibold tracking-tight text-white mb-4">
+                Wayfair migrates 15,000 repositories to GitHub, saving $150,000 a year
+              </h2>
+
+              <div class="inline-block self-start">
+                <a href="#"
+                  class="relative inline-flex items-center gap-1.5 pb-1 text-lg md:text-lg font-semibold text-[#7DD3FC] hover:transition-colors duration-400 group">
+                  <span> Read customer story</span>
+
+                  <span class="inline-flex items-center translate-x-0   transition-transform duration-300 ease-out">
+                    <svg
+                      class="w-3.5 h-3.5 opacity-100 group-hover:opacity-0 group-hover:scale-50 transition-all duration-400 absolute"
+                      fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                    <svg
+                      class="w-4.5 h-4.5 opacity-0 scale-50 group-hover:opacity-100 group-hover:scale-100 transition-all duration-400"
+                      fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                  </span>
+
+                  <span
+                    class="absolute bottom-0 left-0 w-full h-[2px] bg-[#58a6ff] origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out"></span>
+                </a>
+              </div>
+
+
+            </div>
+          </div>
+          <div class="bg-[#111615] p-8 rounded-xl">
+            <div class="">
+              <img
+                src="https://images.ctfassets.net/8aevphvgewt8/7kxFfylfJchjpPHNMzNIDn/44e6a16c195e52ba6c7b0c7ebcb5d758/telus.webp?fm=webp&q=90"
+                alt="">
+
+
+              <h2 class="text-xl pt-6 md:text-2xl font-semibold tracking-tight text-white mb-4">
+                TELUS saves $16.9 million by unifying DevOps on GitHub
+              </h2>
+
+              <div class="inline-block self-start">
+                <a href="#"
+                  class="relative inline-flex items-center gap-1.5 pb-1 text-lg md:text-lg font-semibold text-[#7DD3FC] hover:transition-colors duration-400 group">
+                  <span> Read customer story</span>
+
+                  <span class="inline-flex items-center translate-x-0   transition-transform duration-300 ease-out">
+                    <svg
+                      class="w-3.5 h-3.5 opacity-100 group-hover:opacity-0 group-hover:scale-50 transition-all duration-400 absolute"
+                      fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                    <svg
+                      class="w-4.5 h-4.5 opacity-0 scale-50 group-hover:opacity-100 group-hover:scale-100 transition-all duration-400"
+                      fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                  </span>
+
+                  <span
+                    class="absolute bottom-0 left-0 w-full h-[2px] bg-[#58a6ff] origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out"></span>
+                </a>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="p-4 md:py-16 px-4">
+      <div class="md:max-w-7xl m-auto   ">
+        <div class="relative bg-[#111615]  pt-16  pb-16 overflow-hidden">
+          <!-- mian image bg  -->
+          <div class="max-w-4xl mx-auto px-6 text-center flex flex-col items-center">
+
+            <h1 class="text-3xl md:text-5xl font-semibold tracking-tight text-white leading-[1.1] max-w-3xl">
+              Start your journey with GitHub
+            </h1>
+
+            <p class="mt-6 text-base md:text-[19px] text-gray-400 leading-relaxed max-w-2xl font-light">
+              Whether you’re a startup or Fortune 500, GitHub Enterprise gives you everything you need to innovate
+              securely on the platform developers love.
+            </p>
+
+            <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
+              <a href="#"
+                class="w-full sm:w-auto bg-[#1f883d] hover:bg-[#1a7334] text-white font-semibold px-6 py-3.5 rounded-lg text-base shadow-lg shadow-green-900/20 transition-all text-center">
+                Start a 30-day free trial
+              </a>
+              <a href="#"
+                class="w-full sm:w-auto bg-[#111615]/80 hover:bg-[#111615] text-white font-semibold px-6 py-3.5 rounded-lg text-base border border-gray-800 transition-all text-center">
+                Contact sales
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="p-4 md:py-16 px-4">
+      <div class="md:max-w-7xl m-auto  ">
+        <div class=" text-3xl   md:text-4xl font-semibold tracking-tight text-white leading-tight">Get the most out of
+          GitHub Enterprise</div>
+        <div class=" py-16 grid grid-cols-1 gap-4 md:gap-12 md:grid-cols-3">
+          <div class="bg-[#111615] p-8 rounded-xl">
+            <div class="">
+              <div class="bg-[#0f3522] w-12 rounded-xl h-12 flex justify-center items-center">
+                <svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                  <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                  <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                  <path d="M12 7v14" />
+                </svg>
+              </div>
+
+              <h2 class="text-xl pt-6 md:text-2xl font-semibold tracking-tight text-white mb-4">
+                Get executive insights built for leaders and admins
+
+              </h2>
+
+              <div class="inline-block self-start">
+                <a href="#"
+                  class="relative inline-flex items-center gap-1.5 pb-1 text-lg md:text-lg font-semibold text-[#7DD3FC] hover:transition-colors duration-400 group">
+                  <span> Learn more</span>
+
+                  <span class="inline-flex items-center translate-x-0   transition-transform duration-300 ease-out">
+                    <svg
+                      class="w-3.5 h-3.5 opacity-100 group-hover:opacity-0 group-hover:scale-50 transition-all duration-400 absolute"
+                      fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                    <svg
+                      class="w-4.5 h-4.5 opacity-0 scale-50 group-hover:opacity-100 group-hover:scale-100 transition-all duration-400"
+                      fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                  </span>
+
+                  <span
+                    class="absolute bottom-0 left-0 w-full h-[2px] bg-[#58a6ff] origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out"></span>
+                </a>
+              </div>
+
+
+            </div>
+          </div>
+          <div class="bg-[#111615] p-8 rounded-xl">
+            <div class="">
+              <div class="bg-[#0f3522] w-12 rounded-xl h-12 flex justify-center items-center">
+                <svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                  <path d="M16 5L9 9H5a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h4l7 4V5z" />
+                  <path d="M6 9v6" />
+                  <path d="M19 8.5c1 1.3 1.5 2.5 1.5 3.5s-.5 2.2-1.5 3.5" />
+                </svg>
+              </div>
+
+              <h2 class="text-xl pt-6 md:text-2xl font-semibold tracking-tight text-white mb-4">
+
+                Stay ahead with our quarterly product roadmap webinar
+
+
+              </h2>
+
+              <div class="inline-block self-start">
+                <a href="#"
+                  class="relative inline-flex items-center gap-1.5 pb-1 text-lg md:text-lg font-semibold text-[#7DD3FC] hover:transition-colors duration-400 group">
+                  <span> See what's new</span>
+
+                  <span class="inline-flex items-center translate-x-0   transition-transform duration-300 ease-out">
+                    <svg
+                      class="w-3.5 h-3.5 opacity-100 group-hover:opacity-0 group-hover:scale-50 transition-all duration-400 absolute"
+                      fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                    <svg
+                      class="w-4.5 h-4.5 opacity-0 scale-50 group-hover:opacity-100 group-hover:scale-100 transition-all duration-400"
+                      fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                  </span>
+
+                  <span
+                    class="absolute bottom-0 left-0 w-full h-[2px] bg-[#58a6ff] origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out"></span>
+                </a>
+              </div>
+
+
+            </div>
+          </div>
+          <div class="bg-[#111615] p-8 rounded-xl">
+            <div class="">
+              <div class="bg-[#0f3522] w-12 rounded-xl h-12 flex justify-center items-center">
+                <svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                  <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                  <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                  <path d="M12 7v14" />
+                </svg>
+              </div>
+
+              <h2 class="text-xl pt-6 md:text-2xl font-semibold tracking-tight text-white mb-4">
+                Accelerate adoption with proven guidance
+
+              </h2>
+
+              <div class="inline-block self-start">
+                <a href="#"
+                  class="relative inline-flex items-center gap-1.5 pb-1 text-lg md:text-lg font-semibold text-[#7DD3FC] hover:transition-colors duration-400 group">
+                  <span> Discover GitHub’s framework
+                  </span>
+
+                  <span class="inline-flex items-center translate-x-0   transition-transform duration-300 ease-out">
+                    <svg
+                      class="w-3.5 h-3.5 opacity-100 group-hover:opacity-0 group-hover:scale-50 transition-all duration-400 absolute"
+                      fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                    <svg
+                      class="w-4.5 h-4.5 opacity-0 scale-50 group-hover:opacity-100 group-hover:scale-100 transition-all duration-400"
+                      fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                  </span>
+
+                  <span
+                    class="absolute bottom-0 left-0 w-full h-[2px] bg-[#58a6ff] origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out"></span>
+                </a>
+              </div>
+
+
+            </div>
+          </div>
+          <div class="bg-[#111615] p-8 rounded-xl">
+            <div class="">
+              <div class="bg-[#0f3522] w-12 rounded-xl h-12 flex justify-center items-center">
+                <svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                  <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                  <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                  <path d="M12 7v14" />
+                </svg>
+              </div>
+
+              <h2 class="text-xl pt-6 md:text-2xl font-semibold tracking-tight text-white mb-4">
+
+                See the cost savings and ROI of GitHub Enterprise Cloud
+
+              </h2>
+
+              <div class="inline-block self-start">
+                <a href="#"
+                  class="relative inline-flex items-center gap-1.5 pb-1 text-lg md:text-lg font-semibold text-[#7DD3FC] hover:transition-colors duration-400 group">
+                  <span> Get the Forrester® Total Economic Impact™ study
+                  </span>
+
+                  <span class="inline-flex items-center translate-x-0   transition-transform duration-300 ease-out">
+                    <svg
+                      class="w-3.5 h-3.5 opacity-100 group-hover:opacity-0 group-hover:scale-50 transition-all duration-400 absolute"
+                      fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                    <svg
+                      class="w-4.5 h-4.5 opacity-0 scale-50 group-hover:opacity-100 group-hover:scale-100 transition-all duration-400"
+                      fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                  </span>
+
+                  <span
+                    class="absolute bottom-0 left-0 w-full h-[2px] bg-[#58a6ff] origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out"></span>
+                </a>
+              </div>
+
+
+            </div>
+          </div>
+          <div class="bg-[#111615] p-8 rounded-xl">
+            <div class="">
+              <div class="bg-[#0f3522] w-12 rounded-xl h-12 flex justify-center items-center">
+                <svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                  <path d="M16 5L9 9H5a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h4l7 4V5z" />
+                  <path d="M6 9v6" />
+                  <path d="M19 8.5c1 1.3 1.5 2.5 1.5 3.5s-.5 2.2-1.5 3.5" />
+                </svg>
+              </div>
+
+              <h2 class="text-xl pt-6 md:text-2xl font-semibold tracking-tight text-white mb-4">
+
+                Discover why GitHub leads the Forrester Wave™ for DevOps platforms
+
+              </h2>
+
+              <div class="inline-block self-start">
+                <a href="#"
+                  class="relative inline-flex items-center gap-1.5 pb-1 text-lg md:text-lg font-semibold text-[#7DD3FC] hover:transition-colors duration-400 group">
+                  <span>Read the report
+                  </span>
+
+                  <span class="inline-flex items-center translate-x-0   transition-transform duration-300 ease-out">
+                    <svg
+                      class="w-3.5 h-3.5 opacity-100 group-hover:opacity-0 group-hover:scale-50 transition-all duration-400 absolute"
+                      fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                    <svg
+                      class="w-4.5 h-4.5 opacity-0 scale-50 group-hover:opacity-100 group-hover:scale-100 transition-all duration-400"
+                      fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                  </span>
+
+                  <span
+                    class="absolute bottom-0 left-0 w-full h-[2px] bg-[#58a6ff] origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out"></span>
+                </a>
+              </div>
+
+
+            </div>
+          </div>
+          <div class="bg-[#111615] p-8 rounded-xl">
+            <div class="">
+              <div class="bg-[#0f3522] w-12 rounded-xl h-12 flex justify-center items-center">
+                <svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                  <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                  <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                  <path d="M12 7v14" />
+                </svg>
+              </div>
+
+              <h2 class="text-xl pt-6 md:text-2xl font-semibold tracking-tight text-white mb-4">
+
+                Explore the full documentation for GitHub Enterprise Cloud
+              </h2>
+
+              <div class="inline-block self-start">
+                <a href="#"
+                  class="relative inline-flex items-center gap-1.5 pb-1 text-lg md:text-lg font-semibold text-[#7DD3FC] hover:transition-colors duration-400 group">
+                  <span> View the docs
+                  </span>
+
+                  <span class="inline-flex items-center translate-x-0   transition-transform duration-300 ease-out">
+                    <svg
+                      class="w-3.5 h-3.5 opacity-100 group-hover:opacity-0 group-hover:scale-50 transition-all duration-400 absolute"
+                      fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                    <svg
+                      class="w-4.5 h-4.5 opacity-0 scale-50 group-hover:opacity-100 group-hover:scale-100 transition-all duration-400"
+                      fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                  </span>
+
+                  <span
+                    class="absolute bottom-0 left-0 w-full h-0.5 bg-[#58a6ff] origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out"></span>
+                </a>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="p-4 md:py-16 px-4 pb-16">
+      <div class="md:max-w-7xl m-auto space-y-3 text-gray-400 text-xs">
+        <p>The Total Economic Impact™ Of GitHub Enterprise Cloud, a commissioned study conducted by Forrester
+          Consulting, 2025. Results are for a composite organization based on interviewed customers.</p>
+        <p>Forrester Wave™: DevOps Platforms, Q2 2025. Forrester does not endorse any company, product, brand, or
+          service included in its research publications and does not advise any person to select the products or
+          services of any company or brand based on the ratings included in such publications. Information is based on
+          the best available resources. Opinions reflect judgment at the time and are subject to change. For more
+          information, read about Forrester’s objectivity <a href="#"class="text-[#7DD3FC] border-b hover:border-b-2 ">here.</a> </p>
+
+      </div>
+    </section>
+  </main>
+
+
+  <footer class="bg-[#111615] border-t-4 border-[#5BE38A] text-white px-4 p-4 md:py-16 ">
+
+
+
+    <div class="max-w-7xl mx-auto px-4 py-16">
+
+      <!-- Top: Logo + Newsletter -->
+      <div class="mb-14">
+        <!-- GitHub Logo -->
+        <svg height="32" viewBox="0 0 16 16" width="32" class="fill-white mb-8">
+          <path
+            d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z">
+          </path>
+        </svg>
+
+        <div class="flex items-center gap-2 mb-3">
+          <span class="w-2.5 h-2.5 bg-green-500 inline-block"></span>
+          <span class="uppercase text-xs sm:text-sm font-mono tracking-wider text-white font-semibold">The Developer
+            Newsletter</span>
+        </div>
+
+        <p class="text-[#8b949e] text-sm sm:text-base mb-5 max-w-md leading-relaxed">
+          Get tips, technical guides, and best practices. Twice a month. Right in your inbox.
+        </p>
+
+        <button
+          class="bg-[#238636] hover:bg-[#2ea043] transition-colors text-white text-sm font-semibold px-4 py-2 rounded-md">
+          Subscribe
+        </button>
+      </div>
+
+      <!-- Link columns -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-10 border-t border-zinc-800 pt-10">
+
+        <!-- Platform -->
+        <div>
+          <h4 class="text-[#8b949e] text-xs font-semibold uppercase tracking-wider mb-4">Platform</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="#" class="hover:text-[#7DD3FC] hover:underline underline-offset-2">Features</a></li>
+            <li><a href="#" class="hover:text-[#7DD3FC] hover:underline underline-offset-2">Enterprise</a></li>
+            <li><a href="#" class="hover:text-[#7DD3FC] hover:underline underline-offset-2">Copilot</a></li>
+            <li><a href="#" class="hover:text-[#7DD3FC] hover:underline underline-offset-2">AI</a></li>
+            <li><a href="#" class="hover:text-[#7DD3FC] hover:underline underline-offset-2">Security</a></li>
+            <li><a href="#" class="hover:text-[#7DD3FC] hover:underline underline-offset-2">Pricing</a></li>
+            <li><a href="#" class="hover:text-[#7DD3FC] hover:underline underline-offset-2">Team</a></li>
+            <li><a href="#" class="hover:text-[#7DD3FC] hover:underline underline-offset-2">Resources</a></li>
+            <li><a href="#" class="hover:text-[#7DD3FC] hover:underline underline-offset-2">Roadmap</a></li>
+            <li><a href="#" class="hover:text-[#7DD3FC] hover:underline underline-offset-2">Compare GitHub</a></li>
+          </ul>
+        </div>
+
+        <!-- Ecosystem -->
+        <div>
+          <h4 class="text-[#8b949e] text-xs font-semibold uppercase tracking-wider mb-4">Ecosystem</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="#" class="hover:text-[#7DD3FC] hover:underline underline-offset-2">Developer API</a></li>
+            <li><a href="#" class="hover:text-[#7DD3FC] hover:underline underline-offset-2">Partners</a></li>
+            <li><a href="#" class="hover:text-[#7DD3FC] hover:underline underline-offset-2">Education</a></li>
+            <li><a href="#" class="hover:text-[#7DD3FC] hover:underline underline-offset-2">GitHub CLI</a></li>
+            <li><a href="#" class="hover:text-[#7DD3FC] hover:underline underline-offset-2">GitHub Desktop</a></li>
+            <li><a href="#" class="hover:text-[#7DD3FC] hover:underline underline-offset-2">GitHub Mobile</a></li>
+            <li><a href="#" class="hover:text-[#7DD3FC] hover:underline underline-offset-2">GitHub Marketplace</a></li>
+            <li><a href="#" class="hover:text-[#7DD3FC] hover:underline underline-offset-2">MCP Registry</a></li>
+          </ul>
+        </div>
+
+        <!-- Support -->
+        <div>
+          <h4 class="text-[#8b949e] text-xs font-semibold uppercase tracking-wider mb-4">Support</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="#" class="hover:text-[#7DD3FC] hover:underline underline-offset-2">Docs</a></li>
+            <li><a href="#" class="hover:text-[#7DD3FC] hover:underline underline-offset-2">Community Forum</a></li>
+            <li><a href="#" class="hover:text-[#7DD3FC] hover:underline underline-offset-2">Professional Services</a>
+            </li>
+            <li><a href="#" class="hover:text-[#7DD3FC] hover:underline underline-offset-2">Premium Support</a></li>
+            <li><a href="#" class="hover:text-[#7DD3FC] hover:underline underline-offset-2">Skills</a></li>
+            <li><a href="#" class="hover:text-[#7DD3FC] hover:underline underline-offset-2">Status</a></li>
+            <li><a href="#" class="hover:text-[#7DD3FC] hover:underline underline-offset-2">Contact GitHub</a></li>
+            <li><a href="#" class="hover:text-[#7DD3FC] hover:underline underline-offset-2">What is Git?</a></li>
+            <li><a href="#" class="hover:text-[#7DD3FC] hover:underline underline-offset-2">Sitemap</a></li>
+          </ul>
+        </div>
+
+        <!-- Company -->
+        <div>
+          <h4 class="text-[#8b949e] text-xs font-semibold uppercase tracking-wider mb-4">Company</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="#" class="hover:text-[#7DD3FC] hover:underline underline-offset-2">About</a></li>
+            <li><a href="#" class="hover:text-[#7DD3FC] hover:underline underline-offset-2">Why GitHub</a></li>
+            <li><a href="#" class="hover:text-[#7DD3FC] hover:underline underline-offset-2">Customer Stories</a></li>
+            <li><a href="#" class="hover:text-[#7DD3FC] hover:underline underline-offset-2">Blog</a></li>
+            <li><a href="#" class="hover:text-[#7DD3FC] hover:underline underline-offset-2">The ReadME Project</a></li>
+            <li><a href="#" class="hover:text-[#7DD3FC] hover:underline underline-offset-2">Careers</a></li>
+            <li><a href="#" class="hover:text-[#7DD3FC] hover:underline underline-offset-2">Newsroom</a></li>
+            <li><a href="#" class="hover:text-[#7DD3FC] hover:underline underline-offset-2">Inclusion</a></li>
+            <li><a href="#" class="hover:text-[#7DD3FC] hover:underline underline-offset-2">Social Impact</a></li>
+            <li><a href="#" class="hover:text-[#7DD3FC] hover:underline underline-offset-2">Shop</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom bar -->
+      <div
+        class="flex flex-col md:flex-row md:items-center md:justify-between gap-6 border-t border-zinc-800 pt-8 mt-12">
+
+        <!-- Legal links -->
+        <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs font-mono text-[#8b949e] uppercase">
+          <span>© 2026 GitHub, Inc.</span>
+          <a href="#" class="hover:text-white hover:underline underline-offset-2">Terms</a>
+          <a href="#" class="hover:text-white hover:underline underline-offset-2">Privacy</a>
+          <a href="#" class="hover:text-white hover:underline underline-offset-2">Manage cookies</a>
+          <a href="#" class="hover:text-white hover:underline underline-offset-2">Do not share my personal
+            information</a>
+        </div>
+
+        <!-- Social icons + language -->
+        <div class="flex items-center gap-5">
+
+          <!-- LinkedIn -->
+          <a href="#" aria-label="LinkedIn" class="text-[#8b949e] hover:text-white transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zM7.114 20.452H3.558V9h3.556v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
+          </a>
+
+          <!-- Instagram -->
+          <a href="#" aria-label="Instagram" class="text-[#8b949e] hover:text-white transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+            </svg>
+          </a>
+
+          <!-- YouTube -->
+          <a href="#" aria-label="YouTube" class="text-[#8b949e] hover:text-white transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+            </svg>
+          </a>
+
+          <!-- X -->
+          <a href="#" aria-label="X" class="text-[#8b949e] hover:text-white transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            </svg>
+          </a>
+
+          <!-- TikTok -->
+          <a href="#" aria-label="TikTok" class="text-[#8b949e] hover:text-white transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
+            </svg>
+          </a>
+
+          <!-- Twitch -->
+          <a href="#" aria-label="Twitch" class="text-[#8b949e] hover:text-white transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0 1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L21.714 12.86V0zm13.714 12-3.428 3.429h-3.429l-3 3v-3H6.857V1.714h12.857Z" />
+            </svg>
+          </a>
+
+          <!-- GitHub -->
+          <a href="#" aria-label="GitHub" class="text-[#8b949e] hover:text-white transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 16 16" fill="currentColor">
+              <path
+                d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" />
+            </svg>
+          </a>
+
+          <!-- Language selector -->
+          <button
+            class="flex items-center gap-1.5 border border-zinc-700 rounded-md px-3 py-1.5 text-sm text-white hover:border-zinc-500 transition-colors ml-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10" />
+              <path
+                d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+            </svg>
+            English
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </button>
+
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
