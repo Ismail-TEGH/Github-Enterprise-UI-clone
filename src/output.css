@@ -7,9 +7,6 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-amber-500: oklch(76.9% 0.188 70.08);
-    --color-yellow-500: oklch(79.5% 0.184 86.047);
-    --color-yellow-600: oklch(68.1% 0.162 75.834);
     --color-green-500: oklch(72.3% 0.219 149.579);
     --color-green-900: oklch(39.3% 0.095 152.535);
     --color-blue-400: oklch(70.7% 0.165 254.624);
@@ -88,7 +85,6 @@
     --radius-2xl: 1rem;
     --radius-3xl: 1.5rem;
     --radius-4xl: 2rem;
-    --ease-in: cubic-bezier(0.4, 0, 1, 1);
     --ease-out: cubic-bezier(0, 0, 0.2, 1);
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
     --blur-md: 12px;
@@ -379,9 +375,6 @@
   }
   .ml-1\.5 {
     margin-left: calc(var(--spacing) * 1.5);
-  }
-  .ml-2 {
-    margin-left: calc(var(--spacing) * 2);
   }
   .ml-11 {
     margin-left: calc(var(--spacing) * 11);
@@ -1736,11 +1729,6 @@
       outline-style: none;
     }
   }
-  .sm\:flex {
-    @media (width >= 40rem) {
-      display: flex;
-    }
-  }
   .sm\:w-auto {
     @media (width >= 40rem) {
       width: auto;
@@ -1749,11 +1737,6 @@
   .sm\:flex-row {
     @media (width >= 40rem) {
       flex-direction: row;
-    }
-  }
-  .sm\:flex-nowrap {
-    @media (width >= 40rem) {
-      flex-wrap: nowrap;
     }
   }
   .sm\:text-base {
